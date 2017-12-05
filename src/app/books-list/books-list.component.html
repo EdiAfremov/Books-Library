@@ -1,0 +1,25 @@
+<div class="books-container">
+  <div class="books-list">
+    <div class="book-card" *ngFor="let book of books">
+      <div class="title" [id]="book.id">
+        <h2 class="book-title">{{book.title | titlePipe | onlyEnglishLettersPipe}}</h2>
+        <span class="date">{{book.date.day}}/{{book.date.month}}/{{book.date.year}}</span>
+      </div>
+      <div class="image-container">
+        <img class="image" [src]="book.image" [alt]="book.image">
+      </div>
+      <div class="author-container">
+        <div class="author">
+          <h5 class="author-title">
+            Author:
+            <br>
+            <span class="author-name"> {{book.author}}</span>
+          </h5>
+        </div>
+        <div class="edit">
+          <app-edit-modal [bookId]="book" [booksEdit]="books" (editBook)="onEdit($event)"></app-edit-modal>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

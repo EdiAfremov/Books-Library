@@ -1,0 +1,19 @@
+.btn {
+    transition: all 0s ease-in-out;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ng-valid:not(form) {
+    border-left: 5px solid #42a948;
+}
+
+.input-group {
+    margin-top: 10px;
+    .input-group-addon {
+        width: 100px;
+    }
+}
